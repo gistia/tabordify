@@ -22,7 +22,7 @@ fs.readdir('./', (err, files) => {
         source.forEach(row => {
           const otherNames = _.filter(names, name => name !== `${row['First name']} ${row['Last name']}`);
           otherNames.forEach((name, i) => {
-            row[`Other Name ${i+1}`] = name;
+            row[`Custom ${i+1}`] = name;
           })
           target.push(row);
         });
